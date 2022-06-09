@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All orders</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>All orders</h1>
+    <br>
+    <table>
+        <tr>
+            <th>Order Id:</th>
+            <th style="background-color: #e1e7e7">Order name:</th>
+            <th style="background-color: #e1e7e7">Order color:</th>
+            <th style="background-color: #e1e7e7">Order material:</th>
+        </tr>
+        <tr th:each="order: ${getAllOrders}">
+            <td th:text="${order.id}"></td>
+            <td th:text="${order.name}"></td>
+            <td th:text="${order.color}"></td>
+            <td th:text="${order.material}"></td>
+        </tr>
+    </table>
+    <br>
+    <form action="/">
+        <input type="submit" value="Back to main page"/>
+    </form>
+</div>
+
+</body>
+</html>
